@@ -16,3 +16,23 @@ To read details about the instrument and our files, visit the [DMSP NOAA NCEI (F
 A draft version of the User Manual including the SSM instrument is also available in the repo. 
 This document will tell you what to watch out for so you don't comprimise your analysis, so it's worth reading.
 
+Tools currently in the repo:
+
+### SSM Step Remover
+DMSP SSM magnetometer suffers from occasional step discontinuities in the baseline due to currents from the spacecraft electronics. This tool attempts to automatically remove them.
+
+Usage:
+```
+python ssm_step_remover.py /path/to/my/data/dmsp_ssm_magnetometer_data_file.cdf
+```
+
+To see help:
+```
+python ssm_step_remover.py --help
+```
+
+By default this tool will modify the CDF file inplace creating two new CDF variables
+'DELTA_B_SC_STEPCOR' and 'DELTA_B_APX_STEPCOR',
+which correspond to the step correction in spacecraft and Magnetic Apex coordinates.
+
+This algorithm is not fully optmized, but it catches most step discontinuities correctly. It would provide a starting point for the interested researcher.
