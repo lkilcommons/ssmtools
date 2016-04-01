@@ -25,14 +25,16 @@ Usage:
 ```
 python ssm_step_remover.py /path/to/my/data/dmsp_ssm_magnetometer_data_file.cdf
 ```
-
-To see help:
+To save changes to CDF file:
 ```
-python ssm_step_remover.py --help
+python ssm_step_remover.py /path/to/my/data/dmsp_ssm_magnetometer_data_file.cdf --modifycdf
 ```
-
-By default this tool will modify the CDF file inplace creating two new CDF variables
+To show what the algorithm is doing graphically:
+```
+python ssm_step_remover.py /path/to/my/data/dmsp_ssm_magnetometer_data_file.cdf --showplots
+```
+If the modifycdf flag is used this tool will modify the CDF file inplace creating two new CDF variables
 'DELTA_B_SC_STEPCOR' and 'DELTA_B_APX_STEPCOR',
-which correspond to the step correction in spacecraft and Magnetic Apex coordinates.
+which correspond to the step corrected magnetic perturbations in spacecraft and Magnetic Apex coordinates.
 
 This algorithm is not fully optmized, but it catches most step discontinuities correctly. It would provide a starting point for the interested researcher.
