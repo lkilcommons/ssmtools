@@ -12,9 +12,16 @@ class ssm_step_remover(object):
 	"""
 	Attempt to remove steps using Welches/Student's T test
 	"""
-	def __init__(self,ssmcdffn,plot_correction=True,modifycdf=False,validation_plots=True):
-		self.cdffn = ssmcdffn
-		self.reader = ssm_read_data.ssm_cdf_reader(ssmcdffn)
+	def __init__(self,ssmcdffn,plot_correction=False,modifycdf=False,validation_plots=False,reader=None):
+		
+		#Option to load prexisting reader
+		if reader is None:
+			self.reader = ssm_read_data.ssm_cdf_reader(ssmcdffn)
+			self.cdffn = ssmcdffn
+		else:
+			print "Warning: Ignoring call to use cdffile %s, and using cdf reader instance passed as kwargs['reader'] instead." % (ssmcdffn)
+			self.reader = reader
+			self.cdffn = reader.cdffn
 		self.plot_correction = plot_correction
 		self.modifycdf = modifycdf
 		self.validation_plots = validation_plots
@@ -126,6 +133,7 @@ class ssm_step_remover(object):
 	
 		origdB = dB.copy()
 		istep = 0
+		max_iters = 15 
 		jump_inds = None
 		while not done:
 
@@ -205,6 +213,9 @@ class ssm_step_remover(object):
 				self.reader.dBd2[passinds] = self.reader.dBd2[passinds] - this_d2_correction
 				self.reader.dBd3[passinds] = self.reader.dBd3[passinds] - this_fa_correction
 				istep+=1
+				#Prevent possible infinite loop
+				if istep >= max_iters:
+					done = True
 
 	def repair_all_passes(self):
 		
@@ -227,7 +238,7 @@ class ssm_step_remover(object):
 			self.reader.cdf['DELTA_B_APX_STEPCOR'] = DELTA_B_SC
 			self.reader.cdf.save()
 
-	def compute_correction(self,dB,jumpinds):
+	def compute_correction(self,dB,jumpinds,mode='interpolate'):
 		"""
 		Determines how to correct baseline for jump up and corresponding jump down
 		Gist is that you determine how much the jump up was relative to the mean value before the jump
@@ -249,15 +260,20 @@ class ssm_step_remover(object):
 		#print "Start of step: %3.f nT" % (deltadB_start)
 		#print "End of step: %3.f nT" % (deltadB_end)
 		
-		#Compute difference in start and end deltas
-		se_diff = deltadB_end - deltadB_start
-
-		#Compute slope of linear interpolation
-		slope = se_diff/len(jumpinds)
-
 		correction = np.zeros_like(dB)
-		x = jumpinds-jumpinds[0]+1
-		correction[jumpinds] = slope*x + deltadB_start
+		if mode == 'interpolate':
+			#Compute difference in start and end deltas
+			se_diff = deltadB_end - deltadB_start
+
+			#Compute slope of linear interpolation
+			slope = se_diff/len(jumpinds)
+
+			x = jumpinds-jumpinds[0]+1
+			correction[jumpinds] = slope*x + deltadB_start
+		elif mode == 'smallest':
+			#Just use the smallest of the two possible corrections on the theory that it's better
+			#to undercorrect instead of overcorrect
+			correction[jumpinds] = deltadB_start if deltadB_start > deltadB_end else deltadB_end
 
 		return correction
 
