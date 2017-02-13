@@ -6,8 +6,9 @@ aboard the Defense Meteorolgy Satellite Program spacecraft.
 Specificially, it is a companion to the DMSP SSM CDF files which were prepared as part of NASA grant #NNX13AG07G
 
 You can get the data from the following locations: 
-1. [CDAWeb](http://cdaweb.gsfc.nasa.gov/istp_public/) Virtual Observatory
-2. [National Oceanic and Atmospheric Administration (NOAA NCEI)](http://satdat.ngdc.noaa.gov/dmsp/)
+
+1) [CDAWeb](http://cdaweb.gsfc.nasa.gov/istp_public/) Virtual Observatory
+2) [National Oceanic and Atmospheric Administration (NOAA NCEI)](http://satdat.ngdc.noaa.gov/dmsp/)
 
 ## Read the [Friendly Manual](DMSPSpaceWxSSJSSMSSIESATBDandUsersManual_v1_1.pdf)
 It's included is this repository. It has a list of all of the variables in the CDF files.
@@ -25,8 +26,9 @@ If you write a paper using this software, please acknowledge us or cite the abov
 This software was written to simplify reading DMSP SSM CDF files in Python. Reading it should also help students and researchers understand what is in this data, and how to use it.
 
 These tools are written in the Python language and require the following special libraries in addition to numpy, matplotlib and other tools included in the requirements of the installation script.
-1. [NASA CDF library](http://cdf.gsfc.nasa.gov/html/sw_and_docs.html)
-2. [spacepy](http://spacepy.lanl.gov/index.shtml)
+
+1) [NASA CDF library](http://cdf.gsfc.nasa.gov/html/sw_and_docs.html)
+2) [spacepy](http://spacepy.lanl.gov/index.shtml)
 
 These packages provide the tools nessecary to read the NASA CDF format data available from CDAWeb.
 
