@@ -11,8 +11,9 @@ You can get the data from the following locations:
 * [National Oceanic and Atmospheric Administration (NOAA NCEI)](http://satdat.ngdc.noaa.gov/dmsp/)
 
 ## Read the [Friendly Manual](DMSPSpaceWxSSJSSMSSIESATBDandUsersManual_v1_1.pdf)
-It's included is this repository. It has a list of all of the variables in the CDF files.
-It will also tell you what to watch out for in terms of warts of the data. We've done our best to clean this data, but no dataset is perfect. Knowing the caveats will save you time.
+* Section 2.1 has a table of CDF variable names for spacecraft locations
+* To learn about the auroral boundaries included in this dataset, read section 2.1.1
+* To learn about the SSM dataset, read section 2.3
 
 To read additional details about the instrument and our files, visit the [DMSP NOAA NCEI (Formerly NGDC) Documentation](http://satdat.ngdc.noaa.gov/dmsp/docs/)
 
