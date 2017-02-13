@@ -1,9 +1,9 @@
 # DMSP SSM NASA CDF Tools
 
 This repository includes tools and information about the data from the Magnetometer (SSM) instrument 
-aboard the Defense Meteorolgy Satellite Program spacecraft.
+aboard the Defense Meteorolgy Satellite Program (DMSP) spacecraft.
 
-Specificially, it is a companion to the DMSP SSM CDF files which were prepared as part of NASA grant #NNX13AG07G
+Specificially, it is a companion to the Level-2 DMSP SSM CDF files which were prepared as part of NASA grant #NNX13AG07G
 
 You can get the data from the following locations: 
 
@@ -18,7 +18,7 @@ You can get the data from the following locations:
 To read additional details about the instrument and our files, visit the [DMSP NOAA NCEI (Formerly NGDC) Documentation](http://satdat.ngdc.noaa.gov/dmsp/docs/)
 
 # Rules of the Road
-This software is associated with an *in press* publication. A citation will be added to this readme when it is published.
+This software is associated with an *in press* publication. A citation will be added HERE to this readme when it is published.
 
 If you write a paper using this software, please acknowledge us or cite the above paper.
 
