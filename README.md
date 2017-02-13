@@ -7,7 +7,7 @@ Specificially, it is a companion to the DMSP SSM CDF files which were prepared a
 
 You can get the data from the following locations: 
 
-* [CDAWeb](http://cdaweb.gsfc.nasa.gov/istp_public/) Virtual Observatory
+* [CDAWeb Virtual Observatory](http://cdaweb.gsfc.nasa.gov/istp_public/)
 * [National Oceanic and Atmospheric Administration (NOAA NCEI)](http://satdat.ngdc.noaa.gov/dmsp/)
 
 ## Read the [Friendly Manual](DMSPSpaceWxSSJSSMSSIESATBDandUsersManual_v1_1.pdf)
