@@ -1,23 +1,36 @@
-# ssmtools
-DMSP SSM NASA CDF Tools
+# DMSP SSM NASA CDF Tools
 
 This repository includes tools and information about the data from the Magnetometer (SSM) instrument 
 aboard the Defense Meteorolgy Satellite Program spacecraft.
 
-Specificially, it is a companion to the DMSP SSM CDF files which were prepared as part of NASA grant (#####) 
-for inclusion in the [CDAWeb](http://cdaweb.gsfc.nasa.gov/istp_public/) Virtual Observatory.
+Specificially, it is a companion to the DMSP SSM CDF files which were prepared as part of NASA grant #NNX13AG07G
 
-> These tools are written in the Python language, and it is assumed that users have installed
-> [spacepy](http://spacepy.lanl.gov/index.shtml)
-> and the [NASA CDF library](http://cdf.gsfc.nasa.gov/html/sw_and_docs.html). 
-> These packages provide the tools nessecary to read the CDF format data available from CDAWeb.
+You can get the data from the following locations: 
+1. [CDAWeb](http://cdaweb.gsfc.nasa.gov/istp_public/) Virtual Observatory
+2. [National Oceanic and Atmospheric Administration (NOAA NCEI)](http://satdat.ngdc.noaa.gov/dmsp/)
 
-To read details about the instrument and our files, visit the [DMSP NOAA NCEI (Formerly NGDC) Documentation](http://satdat.ngdc.noaa.gov/dmsp/docs/)
+## Read the [Friendly Manual](DMSPSpaceWxSSJSSMSSIESATBDandUsersManual_v1_1.pdf)
+It's included is this repository. It has a list of all of the variables in the CDF files.
+It will also tell you what to watch out for in terms of warts of the data. We've done our best to clean this data, but no dataset is perfect. Knowing the caveats will save you time.
 
-A draft version of the User Manual including the SSM instrument is also available in the repo. 
-This document will tell you what to watch out for so you don't comprimise your analysis, so it's worth reading.
+To read additional details about the instrument and our files, visit the [DMSP NOAA NCEI (Formerly NGDC) Documentation](http://satdat.ngdc.noaa.gov/dmsp/docs/)
 
-Tools currently in the repo:
+# Rules of the Road
+This software is associated with an *in press* publication. A citation will be added to this readme when it is published.
+
+If you write a paper using this software, please acknowledge us or cite the above paper.
+
+# Software
+
+This software was written to simplify reading DMSP SSM CDF files in Python. Reading it should also help students and researchers understand what is in this data, and how to use it.
+
+These tools are written in the Python language and require the following special libraries in addition to numpy, matplotlib and other tools included in the requirements of the installation script.
+1. [NASA CDF library](http://cdf.gsfc.nasa.gov/html/sw_and_docs.html)
+2. [spacepy](http://spacepy.lanl.gov/index.shtml)
+
+These packages provide the tools nessecary to read the NASA CDF format data available from CDAWeb.
+
+# Tools currently in the repo
 
 ### SSM Step Remover
 DMSP SSM magnetometer suffers from occasional step discontinuities in the baseline due to currents from the spacecraft electronics. This tool attempts to automatically remove them.
