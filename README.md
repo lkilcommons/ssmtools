@@ -10,7 +10,7 @@ You can get the data from the following locations:
 * [CDAWeb Virtual Observatory](http://cdaweb.gsfc.nasa.gov/istp_public/)
 * [National Oceanic and Atmospheric Administration (NOAA NCEI)](http://satdat.ngdc.noaa.gov/dmsp/)
 
-## Read the [Friendly Manual](DMSPSpaceWxSSJSSMSSIESATBDandUsersManual_v1_1.pdf)
+## Read the [Manual](DMSPSpaceWxSSJSSMSSIESATBDandUsersManual_v1_1.pdf)
 * Section 2.1 has a table of CDF variable names for spacecraft locations
 * To learn about the auroral boundaries included in this dataset, read section 2.1.1
 * To learn about the SSM dataset, read section 2.3
@@ -33,7 +33,7 @@ These tools are written in the Python language and require the following special
 
 These packages provide the tools nessecary to read the NASA CDF format data available from CDAWeb.
 
-# Tools currently in the repo
+# Tools Currently in This Repository
 
 ### SSM Step Remover
 DMSP SSM magnetometer suffers from occasional step discontinuities in the baseline due to currents from the spacecraft electronics. This tool attempts to automatically remove them.
