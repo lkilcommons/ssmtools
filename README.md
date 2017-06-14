@@ -20,7 +20,8 @@ To read additional details about the instrument and our files, visit the [DMSP N
 # Rules of the Road
 This software is associated with the following publication.
 
-[Redmon, R. J., W. F. Denig, L. M. Kilcommons, and D. J. Knipp (2017), New DMSP Database of Precipitating Auroral Electrons and Ions, J. Geophys. Res. Space Physics, 122, doi:10.1002/2016JA023339.](http://dx.doi.org/10.1002/2016JA023342)
+[Kilcommons, L. M., R. J. Redmon, and D. J. Knipp (2017), A New DMSP Magnetometer & Auroral Boundary Dataset and Estimates of Field Aligned Currents in Dynamic Auroral Boundary Coordinates, J. Geophys. Res. Space Physics, 122, doi:10.1002/2016JA023342.
+](http://dx.doi.org/10.1002/2016JA023342)
 
 If you write a paper using this software, please acknowledge us or cite the above paper. We would also appreciate if you contact us via the corresponding author email associated with the above publication.
 
