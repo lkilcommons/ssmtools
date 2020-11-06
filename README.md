@@ -1,6 +1,6 @@
 # DMSP SSM NASA CDF Tools
 
-  If your interested in the auroral boundary algorithm described in Kilcommons et al. 2017, see [this repository](https://github.com/lkilcommons/ssj_auroral_boundary)
+    **If your interested in the auroral boundary algorithm described in Kilcommons et al. 2017, see [this repository](https://github.com/lkilcommons/ssj_auroral_boundary)**
 
 This repository includes tools and information about the data from the Magnetometer (SSM) instrument 
 aboard the Defense Meteorolgy Satellite Program (DMSP) spacecraft.
